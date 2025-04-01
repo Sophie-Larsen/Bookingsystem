@@ -1,0 +1,44 @@
+﻿@page
+@model Bookingsystem.Pages.Lokale.GetAlllokalerModel
+@{
+}
+<h1>Lokale</h1>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                Navn
+            </th>
+
+            <th> 
+                Størrelse
+            </th>
+
+            <th>
+                Udstyr
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+     @if (Model.Lokaler !=null)
+     {
+        foreach (var lokale in Model.Lokaler)
+              {
+               <tr>
+                   <td>
+                       @lokale.Navn
+                   </td>
+                   <td>
+                    @lokale.Størrelse
+                   </td> 
+                   <td>
+                    @lokale.Udstyr
+                   </td>
+               </tr> 
+               }
+    }   
+
+    </tbody>
+    
+ </table>
