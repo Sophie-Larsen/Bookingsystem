@@ -11,7 +11,7 @@
                 Navn
             </th>
 
-            <th> 
+            <th>
                 Størrelse
             </th>
 
@@ -21,22 +21,26 @@
         </tr>
     </thead>
     <tbody>
-     @if (Model.Lokaler !=null)
-     {
-        foreach (var lokale in Model.Lokaler)
-              {
-               <tr>
-                   <td>
-                       @lokale.Navn
-                   </td>
-                   <td>
-                    @lokale.Størrelse
-                   </td> 
-                   <td>
-                    @lokale.Udstyr
-                   </td>
-               </tr> 
-               }
-    }   
+        @if (Model.Lokaler != null)
+        {
+            foreach (var lokale in Model.Lokaler)
+            {
+                <tr>
+                    <td>
+                        @lokale.Navn
+                    </td>
+                    <td>
+                        @lokale.Størrelse
+                    </td>
+                    <td>
+                        @lokale.Udstyr
+                    </td>
+                </tr>
+            }
+        }
     </tbody>
- </table>
+</table>
+
+<p>
+    <a class="btn btn-primary" href="/Createlokale"> Opret nyt Lokale </a>
+</p>

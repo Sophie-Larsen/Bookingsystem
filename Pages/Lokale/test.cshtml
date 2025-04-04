@@ -1,0 +1,22 @@
+﻿@page
+@model Bookingsystem.Pages.Lokale.testModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Lokale.Størrelse"></label>
+        <input asp-for="Lokale.Størrelse" class="form-control" />
+        <span asp-validation-for="Lokale.Størrelse" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Lokale.Navn"></label>
+        <input asp-for="Lokale.Navn" class="form-control" />
+        <span asp-validation-for="Lokale.Navn" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Lokale.Udstyr"></label>
+        <input asp-for="Lokale.Udstyr" class="form-control" />
+        <span asp-validation-for="Lokale.Udstyr" class="text-danger"></span>
+    </div>
+</form>

@@ -1,24 +1,23 @@
-    using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Collections.Generic;
-using Bookingsystem.Oversigt;
-using System.Reflection;
-
+using Bookingsystem.Service;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Bookingsystem.Pages.Lokale
 {
     public class GetAlllokalerModel : PageModel
     {
-        public List<Oversigt.Lokale> Lokaler { get; private set; } = new List<Oversigt.Lokale>()
-            {
-               new Oversigt.Lokale("LokaleA", 10, "Tavle"),
-               new Oversigt.Lokale("LokaleB", 20, "Tavle og Højbord"),
-               new Oversigt.Lokale("LokaleC", 40, "Højbord og lille skærm")
-           };
+        private LokaleServiceKlasse _lokaleService;
+
+        public GetAlllokalerModel(LokaleServiceKlasse lokaleServiceKlasse)
+        {
+            this._lokaleService = lokaleServiceKlasse;
+        }
+
+        public List<Oversigt.Lokale> Lokaler { get; private set; } = new List<Oversigt.Lokale>();
 
         public void OnGet()
         {
-            
-           
+            Lokaler = _lokaleService.GetAllLMockItems();
         }
     }
 

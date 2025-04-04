@@ -1,3 +1,5 @@
+using Bookingsystem.Service;
+
 namespace Bookingsystem
 {
     public class Program
@@ -8,6 +10,7 @@ namespace Bookingsystem
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddSingleton<LokaleServiceKlasse,LokaleServiceKlasse>();
 
             var app = builder.Build();
 
