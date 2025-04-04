@@ -20,7 +20,6 @@ namespace Bookingsystem.Pages.Lokale
             
            
         }
-
     }
 
 }
